@@ -48,14 +48,20 @@
             position: relative;
         }
 
-        #container {
+        .container {
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
-        #content {
+        .content {
             flex: 0 0 120px;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .container {
+                display: inline; 
+            }
         }
     </style>
     <link href="https://unpkg.com/sanitize.css" rel="stylesheet" />
@@ -65,8 +71,8 @@
 </head>
 
 <body>
-    <div id="container">
-        <div id="content">
+    <div class="container">
+        <div class="content">
             <div>
                 <a class="" data-gnav-element-name="Logo" id="indeed-globalnav-logo" aria-label="Indeed Home">
                     <div class="gnav-Logo-icon" aria-hidden="true"><svg width="225" height="60" viewBox="0 0 75 20"
